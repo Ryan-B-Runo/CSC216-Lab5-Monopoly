@@ -10,9 +10,6 @@ public class Driver {
         monopolyBoard.append("Income Tax");
         // And so on for all of the spaces on the board...
 
-        System.out.println(monopolyBoard.toString());
-
-
         System.out.println(monopolyBoard.getCurrentNode()); // This should print "Go" to the console
 
         monopolyBoard.step();

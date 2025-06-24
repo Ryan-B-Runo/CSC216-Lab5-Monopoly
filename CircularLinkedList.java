@@ -11,7 +11,7 @@ public class CircularLinkedList<E> {
         this.size = 0;
     }
 
-    public void append(E e) {
+    public void appendFirst(E e) {
         if(size == 0){
             tail = new Node<>(e, null);
             tail.setNext(tail);
@@ -21,6 +21,11 @@ public class CircularLinkedList<E> {
             tail.setNext(newNode);
         }
         size++;
+    }
+
+    public void append(E e) {
+        appendFirst(e);
+        tail = tail.getNext();
     }
 
     public void step(){
